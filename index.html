@@ -117,11 +117,22 @@
         <label>Расскажите о задаче<textarea name="message" rows="3" placeholder="Что хотите создать или автоматизировать?"></textarea></label>
         <label>Ориентировочный бюджет <span class="optional">(необязательно)</span><input name="budget" type="text" placeholder="Например, 20 000–30 000 ₽"></label>
         <button class="button button-light submit-button" type="submit">Отправить заявку <span>↗</span></button>
-        <p class="form-hint">Нажимая кнопку, вы откроете почтовое приложение с подготовленной заявкой. Перед публикацией сайта укажите рабочий e-mail в файле script.js.</p>
+        <p class="form-hint">После отправки заявка откроется в WhatsApp с номером студии.</p>
         <p class="form-status" id="formStatus" aria-live="polite"></p>
       </form>
     </section>
   </main>
+
+  <div class="submission-modal" id="submissionModal" role="dialog" aria-modal="true" aria-labelledby="submissionModalTitle" hidden>
+    <div class="submission-modal__backdrop" data-close-modal></div>
+    <div class="submission-modal__content">
+      <button class="submission-modal__close" type="button" aria-label="Закрыть" data-close-modal>×</button>
+      <div class="submission-modal__icon">✓</div>
+      <h2 id="submissionModalTitle">Вы записаны</h2>
+      <p id="submissionModalText">Ваша заявка принята. Мы свяжемся с вами в ближайшее время.</p>
+      <button class="button button-light submission-modal__ok" type="button" data-close-modal>Хорошо</button>
+    </div>
+  </div>
 
   <footer class="footer section-wrap"><a class="logo" href="#top"><span class="logo-mark">N</span><span class="logo-text">DIGITAL<span>STUDIO</span></span></a><span>© <span id="year"></span> DIGITAL STUDIO</span><span>САНКТ-ПЕТЕРБУРГ · РОССИЯ</span><a href="#top" class="to-top">НАВЕРХ ↑</a></footer>
   <script src="script.js"></script>
