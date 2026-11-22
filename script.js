@@ -1,4 +1,4 @@
-const WHATSAPP_PHONE = "79667557814";
+const TELEGRAM_PHONE = "79667557814";
 
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
@@ -25,7 +25,7 @@ document.getElementById("contactForm").addEventListener("submit", event => {
   const modal = document.getElementById("submissionModal");
   modal.hidden = false;
   document.body.classList.add("modal-open");
-  window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${message}`, "_blank", "noopener,noreferrer");
+  window.location.href = `https://t.me/+${TELEGRAM_PHONE}?text=${message}`;
 });
 
 document.querySelectorAll("[data-close-modal]").forEach(control => {
